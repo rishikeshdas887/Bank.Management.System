@@ -34,7 +34,16 @@ void deposit(double amount){
 
 //making a withdraw method 
 void withdraw(double amount){
-    balance=balance-amount;
+
+   
+    if(amount<=0){
+        System.out.println(balance);
+    }else if(amount>balance){
+        System.out.println("Insufficient Balance");
+    } else{
+         balance=balance-amount;
+         System.out.println(balance);
+    }
 }
 
 }
